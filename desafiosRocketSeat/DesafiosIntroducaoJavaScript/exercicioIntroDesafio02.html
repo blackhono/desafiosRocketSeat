@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<h1 onclick="pares(32, 321)">Aperte f12, vai em console
+    ,<br> e passe o mouse aqui para ver <br>a função. Esta função
+ traz somente numeros pares do que foi pedido</h1>
+    
+<script>
+
+
+
+    function pares(x,y){
+
+        for(var i = x; i <= y; i++){
+
+            if(i%2===0){
+
+                console.log(i);
+
+            }
+
+        }
+
+    }
+
+
+    /* minha maneira
+    function pares(){
+
+        var intervalo1= 0
+        var intervalo2= 200
+
+
+        for(i = intervalo1; i <= intervalo2; i++){
+            
+            if(i%2 === 0){
+
+                console.log(i);
+                
+
+            }
+        }
+        
+    }
+    */
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <ul class="listaNaoOrdenada">
+
+    </ul>
+
+
+
+
+
+    <script>
+
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        
+        var listaNaoOrdenada = document.querySelector('ul.listaNaoOrdenada');
+        
+        for(var i = 0; i < nomes.length;i++){
+            var text=nomes[i];
+            alert(text);
+            var listtext = document.createElement('li');
+            listtext.innerText=text;
+            listaNaoOrdenada.appendChild(listtext);
+            
+            
+        }
+
+        /*for para percorrer o objeto nomes*/
+
+
+    </script>
+
+
+</body>
+</html>

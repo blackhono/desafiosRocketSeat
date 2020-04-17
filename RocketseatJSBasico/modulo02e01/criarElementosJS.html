@@ -1,0 +1,23 @@
+<html>
+    <head >
+        <meta charset="UTF-8">
+        <title>Curso Javascript Rockseat</title>
+    </head>
+    <body>
+        <div id='app'>
+            
+        </div>
+        <script>
+            var linkElement = document.createElement('a');
+            linkElement.setAttribute('href','http://rocketseat.com.br');
+            ///elemento para colocar o link  
+            var textElement = document.createTextNode('Acessar o Site da Rocketseat');
+            linkElement.appendChild(textElement);
+
+            // agora eu escolho onde colocar o elemento criado
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
+       </script>
+        
+    </body>
+</html>

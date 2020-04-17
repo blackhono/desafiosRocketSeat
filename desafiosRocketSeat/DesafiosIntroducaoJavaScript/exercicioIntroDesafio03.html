@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<h1 onclick='temHabilidade("Javascript")'>Clique aqui para retornar se essa skill é existente (abra o console antes)</h1>
+    
+
+
+<script>
+
+function temHabilidade(skill){
+
+    
+    return skills.indexOf(skill) > -1?console.log("V"):console.log("F");
+
+}
+
+var skills = ["Javascript","React","React Native"];
+
+
+
+
+
+
+
+
+
+/*Entendimento de outra maneira
+
+    function temHabilidade(habilidade){
+
+        var skills = ["Javascript", "ReactJS","React Native"];
+
+        var habilidade;
+
+        console.log(habilidade);
+
+        for(var i = 0; i <= skills.length; i++ ){
+            console.log(i,skills.length);
+            return (skills[i]===habilidade)?console.log("Verdadeiro"):console.log("Falso");
+
+        }
+
+    }
+
+    */
+
+</script>
+
+
+</body>
+
+
+</html>

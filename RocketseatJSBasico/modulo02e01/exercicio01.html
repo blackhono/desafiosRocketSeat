@@ -1,0 +1,42 @@
+<html>
+    <head >
+        <meta charset="UTF-8">
+        <title>Curso Javascript Rockseat</title>
+    </head>
+    <body>
+        <div id="app">
+            <div class="box">eita</div>
+        </div>
+      
+
+        <script>
+            var btn = document.querySelector('#app');
+            btn = document.createElement('BUTTON'); 
+            var btntext = document.createTextNode("click em mim");
+            btn.appendChild(btntext);
+            document.body.appendChild(btn);
+
+            btn.addEventListener('click', quadradovermelho);
+
+                
+
+            function quadradovermelho(){
+                
+                var boxElement = document.querySelector('.box');
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#f00';
+
+                document.body.appendChild(boxElement);
+
+            }
+            
+            
+            
+
+            
+            
+            
+        </script>
+    </body>
+</html>

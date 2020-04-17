@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" name="nome">
+        <button class="botao">Adicionar</button>
+    </div>
+
+    <script>
+
+        var inputElement = document.querySelector('div#app input');
+
+        /*
+        Também podendo ser escrito assim 
+        document.querySelector('input[nome=nome]');
+        e se precisar buscar mais de um elemento é só colcoar
+        querySelectorAll();
+        */
+
+        console.log(inputElement);
+
+        /* podendo ser assim também: 
+        quando lidar com input e classes por exemplo tem que colocar o [] 
+        pois a informação sempre vai vir como se tivesse mais de uma!
+        var inputElement = document.getElementsByClassName('nome')[0];
+
+        console.log(inputElement);
+        */
+
+        /*Teste*/ 
+
+        var btnElement= document.querySelector('button.botao');
+
+        btnElement.onclick = function clicoubotao(){
+            var text = inputElement.value;
+            alert("Botão apertado e campo com a seguinte mensagem: "+text);
+        }
+
+
+
+    </script>
+</body>
+</html>

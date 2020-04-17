@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<h1>Exercicio 5 de Introdução ao Javascript RocketSeat</h1>
+<p class="demo">A B C D</p>
+
+<script>
+
+var usuarios = [
+    {
+        nome:"Diego",
+        habilidades:["Javascript","ReactJS","Redux"]
+    },
+    {
+        nome:"Gabriel",
+        habilidades:["VueJS","Ruby on Rails", "Elixir"]
+    }
+];
+
+function usuarioHabilidade(usuarios){
+    var resposta;
+    for(usuarios of usuarios){
+        resposta = ("O "+usuarios.nome+" possui as habilidades: "
+        +usuarios.habilidades.join(', '));
+        console.log(resposta);
+        
+    }
+}
+
+
+usuarioHabilidade(usuarios);
+
+
+
+
+</script>
+
+</body>
+
+</html>

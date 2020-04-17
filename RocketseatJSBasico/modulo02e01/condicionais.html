@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Curso Javascript Rockseat</title>
+    </head>
+    <body>
+        <script>
+            //variaveis
+            var x = 10, y = 5;
+            console.log(x,y);
+
+            /// == verifica se valor é igual
+            /// === verifica tambem se o tipo é igual no caso se é int ou string
+            function retornaSexo(sexo){
+                if(sexo === 'M'){
+                    return'Masculino';
+                }else if(sexo==='F'){
+                    return 'Feminino';
+                }else{
+                    return 'Outro';
+                }
+                // tambem podemos usar Switch Case
+            }
+
+            var resultado = retornaSexo('M');
+            console.log(resultado);
+
+       </script>
+        
+    </body>
+</html>

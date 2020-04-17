@@ -1,0 +1,23 @@
+<html>
+    <head >
+        <meta charset="UTF-8">
+        <title>Curso Javascript Rockseat</title>
+    </head>
+    <body id = 'app'>
+        <div class="box">
+            <button onclick='quadradoVermelho()'>Clique aqui para um quadrado vermelho</button>
+        </div>
+
+        <script>
+
+        function quadradoVermelho(){
+            var quadrado = document.createElement('CANVAS');
+            quadrado.style.heigth = 100;
+            quadrado.style.width = 100;
+            quadrado.style.background = '#F00';
+            document.body.appendChild(quadrado);
+        }
+
+        </script>
+    </body>
+</html>

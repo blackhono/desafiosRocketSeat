@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button class="criaquadrado">Clique para criar um quadrado</button>
+    <div class="espacoparaquadrados">Espaço para quadrados</div>
+
+
+
+    <script>
+
+
+        var btnCriaQuadrado = document.querySelector('button.criaquadrado');
+        var divEspacoParaQuadrados = document.querySelector('.espacoparaquadrados');
+
+        btnCriaQuadrado.onclick = function criaobjetoquadrado(){
+           var quadrado = document.createElement("div");
+           quadrado.style.width= '100px' ;
+           quadrado.style.height= '100px' ;
+           quadrado.style.backgroundColor='red';
+
+           divEspacoParaQuadrados.appendChild(quadrado);
+        }
+
+
+    </script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head >
+        <meta charset="UTF-8">
+        <title>Curso Javascript Rockseat</title>
+    </head>
+    <body>
+        
+        
+        <button id="botao">insere dados</button>
+        <div id="entradaDeDados">
+        <label>Insira um dado e aperte no botão</label>
+        <input id = 'inputDados' type="text">
+        </div>
+        <div>Lista ordenada de dados
+            <ul id = 'nomes'>Nome</ul>
+        </div>
+        <script>
+        
+        var elementoBotao = document.getElementById('botao');
+        var elementoEntradaDedados = document.getElementById('entradaDeDados');
+        var elementoInputDados = document.getElementById('inputDados').value;
+        var elementoNomes = document.getElementById('nomes');
+        
+
+        elementoBotao.onclick = function (){
+            var criaUl = document.createElement('ul');
+            elementoNomes.appendChild(criaUl);
+            elementoInputDados.appendChild(criaUl);
+
+
+        }
+
+        </script>
+    </body>
+</html>

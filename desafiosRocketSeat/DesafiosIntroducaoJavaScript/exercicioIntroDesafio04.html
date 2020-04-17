@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<h1>Abra o console para ver o código em funcionamento na page</h1>
+
+
+<script>
+
+    function experiencia(anos){
+
+        var nivel ="É um ";
+
+        if(anos < 0){
+            nivel+="bebe em planejamento!";
+        }else{
+            if(anos <= 1){
+                nivel+="Iniciante";
+            }
+            if(anos <= 3){
+                nivel+="Intermediário";
+            }
+            if(anos <= 6){
+                nivel+="Avançado";
+            }
+            if(anos >= 7){
+                nivel+="Jedi Master";
+            }
+        }
+        console.log(nivel);
+    }
+
+    var anosEstudo = 7;
+    experiencia(anosEstudo);
+
+</script>
+
+</body>
+
+</html>

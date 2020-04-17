@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="h1Message" onmouseover="moradiaUsuario();">Aperte f12, vai em console
+    ,<br> e passe o mouse aqui para ver <br>a função </h1>
+    <h2>eita</h2>
+
+    <script>
+
+    eita = document.getElementsByClassName("h1Message")
+    
+    
+    function moradiaUsuario(){
+
+        var enderecos = [1,2,3]
+        enderecos[1] = {
+        rua: 'Rua dos pinheiros',
+        numero: 1293,
+        bairro: 'Centro',
+        cidade: 'São Paulo',
+        uf: 'SP'
+    
+    }
+
+        console.log("O usuario mora em "+enderecos[1].cidade+" / "+enderecos[1].uf+", no bairro "+enderecos[1].bairro+", na "
+        +enderecos[1].rua+" com nº "+enderecos[1].numero);
+    }
+    </script>
+    
+
+
+</body>
+
+
+
+
+
+
+</html>

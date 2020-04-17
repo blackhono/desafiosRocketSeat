@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <h1>Coloque seu nome de dev aqui também!</h1>
+    <button class='adicionar'>Adicionar</button>
+    <input type="text" class='entradaNome'>
+
+
+    <ul class="listaNaoOrdenada">
+
+    </ul>
+
+
+    <script>
+
+
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        
+
+        var botaoAdicionar = document.querySelector('button.adicionar');
+        var textoNomeEntrada = document.querySelector('input.entradaNome');
+        var listaNaoOrdenada = document.querySelector('ul.listaNaoOrdenada');
+        
+        /*ao cliclar cria um 'li' que recebe o valor do input 
+        então é anexado a 'ul' como filha. Depois é verificado
+        o tamanho do vetor nomes para utilizar na adição do valor
+        de input neste vetor 
+        {Vetor é contado do 0 para armazenar porém seus espaços começam em 1
+        por isso o ultimo valor do seu tamanho da para ser usado como direcionador
+        a qual você vai insegir o valor desejado}*/
+        
+        botaoAdicionar.onclick = function adicionar(){
+            var text;
+            text = textoNomeEntrada.value;
+            var listtext = document.createElement('li');
+            listtext.innerText='Nome de Devs: '+text;
+            listaNaoOrdenada.appendChild(listtext);
+            var TamanhoDoVetor = nomes.length;
+            nomes[TamanhoDoVetor]=textoNomeEntrada.value;
+            alert("Vetor de nomes: "+nomes);
+            textoNomeEntrada.value="";
+            
+        }
+
+
+        for(var i = 0; i < nomes.length;i++){
+            var text=nomes[i];
+            var listtext = document.createElement('li');
+            listtext.innerText="Nome de Devs: "+text;
+            listaNaoOrdenada.appendChild(listtext);
+            
+            
+        }
+
+        /*for para percorrer o objeto nomes*/
+
+
+    </script>
+
+
+
+
+</body>
+
+
+
+
+</html>

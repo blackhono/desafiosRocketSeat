@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <input id="nome">
+
+    </div>
+
+
+    <script>
+
+        /*criação de elemento com filho */
+
+        /*Lembrando que mesmo sem o elemento no html ainda se usa os termos do html*/
+        var linkElement = document.createElement('a');
+        linkElement.setAttribute('href','https://www.facebook.com/');
+        linkElement.setAttribute('title','Rede Social Facebook');
+
+        /*criação do texto onde alocaremos o link*/
+
+        var textElement = document.createTextNode('Link para o Facebook');
+        linkElement.appendChild(textElement);
+
+
+        /*Onde colocaremos esses elementos*/
+
+        var containerElement = document.querySelector('#app');
+        containerElement.appendChild(linkElement);
+
+        /*Pegar um elemento html e remover atravez de manipulação de DOM*/
+        var inputElement = document.querySelector('#nome');
+        containerElement.removeChild(inputElement);
+    </script>
+
+
+</body>
+
+</html>

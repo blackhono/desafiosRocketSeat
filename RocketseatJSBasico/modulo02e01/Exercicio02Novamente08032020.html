@@ -1,0 +1,41 @@
+<html>
+    <head >
+        <meta charset="UTF-8">
+        <title>Curso Javascript Rockseat</title>
+    </head>
+    <body>
+
+        <button id = 'botao1'>Me aperte e reflita a vida</button>
+        <div id="quadrado1"></div>
+      
+
+        <script>
+
+            var elementobotao1 = document.getElementById('botao1');
+            var elementoquadrado = document.getElementById('quadrado1');
+
+            elementobotao1.onclick = function (){
+                var objetoquadrado = document.createElement('CANVAS');
+                objetoquadrado.style.height = '100px';
+                objetoquadrado.style.width = '100px';
+                objetoquadrado.style.background = '#F10';
+
+                objetoquadrado.onmouseover = function(){
+                    objetoquadrado.style.background = getRandomColor();
+                }
+
+                elementoquadrado.appendChild(objetoquadrado);
+            }
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+            return color;
+            }
+            
+        </script>
+    </body>
+</html>
