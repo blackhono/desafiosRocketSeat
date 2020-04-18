@@ -3,20 +3,24 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.9.5",
-    "@babel/preset-env": "^7.9.5"
+    "@babel/preset-env": "^7.9.5",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
   },
   "scripts": {
-    "dev": "babel ./main.js -o ./bundle.js -w",
+    "devBabel": "babel ./main1modulo.js -o ./bundle.js -w",
     "des1": "babel ./desafiosjses6/des1.js -o ./bundle.js -w",
     "des2": "babel ./desafiosjses6/des2.js -o ./bundle.js -w",
     "des3": "babel ./desafiosjses6/des3.js -o ./bundle.js -w",
     "des4": "babel ./desafiosjses6/des4.js -o ./bundle.js -w",
     "des5": "babel ./desafiosjses6/des5.js -o ./bundle.js -w",
     "des6": "babel ./desafiosjses6/des6.js -o ./bundle.js -w",
-    "des7": "babel ./desafiosjses6/des7.js -o ./bundle.js -w"
+    "des7": "babel ./desafiosjses6/des7.js -o ./bundle.js -w",
+    "dev": "webpack --mode=development -w"
   }
 }

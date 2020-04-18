@@ -1,31 +1,3 @@
-class List{
-    constructor(){
-        this.data = [];
-    }
-    add(data){
-        this.data.push(data);
-        console.log(this.data);
-    }
-}
+import { soma } from './funcoes'
 
-
-class TodoList extends List{
-    constructor(){
-        super();
-    
-        this.usuario = 'Diego';
-    }
-
-    mostraUsuario(){
-        console.log(this.usuario);
-    }
-
-}
-
-const MinhaLista = new TodoList();
-
-document.getElementById('adicionarToDo').onclick = function(){
-    MinhaLista.add('Novo ToDo');
-}
-
-MinhaLista.mostraUsuario();
+console.log(soma(1,2));
