@@ -14,6 +14,21 @@ class App{
     registerHandlers(){
         this.formElement.onsubmit = event => this.addRepository(event);
     }
+
+    setLoading(loading = true){
+        if(loading === true){
+            let loadElement = document.createElement('span');
+            loadElement.appendChild(document.createTextNode(
+                'Carregando'
+            ));
+            loadElement.setAttribute('id','loading');
+            this.formElement.appendChild(loadElement);
+        }
+        else{
+            document.getElementById('loading').remove();
+        }
+    }
+
     async addRepository(event){
         event.preventDefault();
 
@@ -22,21 +37,30 @@ class App{
         if (repoInput === 0){
             return;
         }
+        this.setLoading();
+        try{
+            const response = await api.get(`/repos/${repoInput}`);
 
-        const response = await api.get(`/repos/${repoInput}`);
+            const {name,description,html_url, owner:{avatar_url}}=response.data;
 
-        const {name,description,html_url, owner:{avatar_url}}=response.data;
+            console.log(response);
 
-        console.log(response);
+            this.repositories.push({
+                name,
+                description,
+                avatar_url,
+                html_url,
+            });
 
-        this.repositories.push({
-            name: name,
-            description: description,
-            avatar_url:avatar_url,
-            html_url:html_url,
-        });
+            this.inputElement.value='';
 
-        this.render();
+            this.render();
+        } catch(err){
+            alert(`Repositorio "${this.inputElement.value}" não existe!
+            ${err}`);
+        }
+
+        this.setLoading(false);
     }
 
     render(){
